@@ -262,18 +262,12 @@ function fn1(){
 }
 
 
-function selectors(){
-    // document.getElementById();
-    // $("h2").action();                            => action() => predefined functions in jQuery
-    //                                              => ("h2")   => the selector
-    $("h2").fadeToggle();                           // getElementByTag
-    $("#firstH2").fadeToggle(1500);                 // getElementById
-    $(".myHeading").fadeToggle();                   // getElementByClass
-    //$("#firstDiv,p,li,.myDivs").fadeToggle(1000);
-    $("p:first").fadeToggle(1500);                  
-    $("li:even").fadeToggle(1500);                  //position 0 and 2 are selected
 
-}
+
+
+
+
+
 
 
 
