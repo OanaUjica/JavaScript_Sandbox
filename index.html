@@ -1,114 +1,36 @@
 <html>
     <head>
         <title>JavaScript Sandbox</title>
-        <script src="demo.js" type="text/javascript"></script>
+        <script src="js/demo.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-        <!-- <button onclick="buttonClick()">Click Me</button>
-        <h2 id="heading2">Some Random Text</h2> -->
 
+        <!-- jQuery selectors -->
 
-        <!-- <input id="text1" placeholder="username">
-        <br><br>
-        <input type="password" id="text2" placeholder="password">
-        <br><br>    
-        <button onclick="submitResult()" id="btn1">Submit</button> -->
+        <h2>Selectors jQuery</h2>    
+        <p>This is a paragraph outside Div</p> 
+        
+        <!-- the parent is DIV, the child is P -->
+        <div id="firstDiv" class="myDivs">
+            <p>This is first paragraph in first division</p>            
+            <p>This is second paragraph in first division</p>
+        </div>    
+        <div id="secondDiv" class="myDivs">            
+            <p>This is third paragraph in second division</p>
+        </div>
+        <div id="thirdDiv" class="myDivs">            
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+                <li>List item 4</li>
+            </ul>
+        </div>
 
+        <button onclick="selectors()" id="btn1">Click Me</button>
 
-        <!-- <input id="rd1" name="grp1" type="radio" value="SS">Simple Snippets</input>
-        <br>
-        <input id="rd2" name="grp1" type="radio" value="Oana's work">Oana's work</input>
-        <br><br>
-        <button onclick="AlertWithTheSelectedRadioButton()" id="btn1">Click Me</button> -->
-
-        <!-- 
-        <select id="selectBox">
-            <option value="Simple Snippets">Simple Snippets</option>
-            <option value="Oana's work">Oana's work</option>
-            <option value="MKBHD">MKBHD</option>
-        </select>
-        <button onclick="AlertWithTheSelectBox()">Click Me</button> -->
-
-
-        <!-- <p>Paragraph 1</p>
-        <p>Paragraph 2</p>
-        <button onclick="changeStyling()">Click Me</button> -->
-
-
-        <!-- <p id="p1" class="myparagraph">Paragraph 1</p>
-        <p>Paragraph 2</p>
-        <p class="myparagraph">Paragraph 3</p>
-        <a href="#">This is Anchor tag</a>
-        <br><br>
-        <button onclick="changeStylingWithClass()">Click Me</button> -->
-
-        <!-- mouseover & mouseout events -->
-        <!-- <img id="imgs" onmouseover="setNewImage()" onmouseout="setOldImage()" src="imgs/Azore.jpg" width="500"/> -->
-
-        <!-- form validation -->
-        <!-- <br><br>
-        <form onsubmit="return validate()" action="message.html">
-            <input id="uname" placeholder="Username" type="text">
-            <label id="labelUser" style="color:red; visibility: hidden;"> Invalid</label>
-            <br><br>
-            <input id="pass" placeholder="Password" type="password">
-            <label id="labelPass" style="color:red; visibility: hidden;">Password to short</label>
-            <br><br>
-            <button type="submit">Submit</button>
-        </form> -->
-
-
-        <!-- <br><br>
-        <form>
-            <input id="uname" placeholder="Username" type="text">
-            <label id="labelUser" style="color:red; visibility: hidden;"> Invalid UserName</label>
-            <br><br>
-            <button onclick="validateUserName()" type="button">Submit</button>
-        </form> -->
-
-
-        <!-- form email validation -->
-        <!-- <br><br>
-        <form>
-            <input id="email" placeholder="Email" type="text">
-            <label id="labelText" style="color:red; visibility: hidden;"> Invalid</label>
-            <br><br>
-            <button onclick="validateEmail()" type="button">Submit</button>
-        </form> -->
-
-
-        <!-- debugging JavaScript using Chrome Dev tools -->
-        <!-- <br><br>
-        <input id="t1" type="text" placeholder="Text 1">
-        <br><br>
-        <input id="t2" type="text" placeholder="Text 2">
-        <br><br>
-        <button onclick="addValue()" id="btnAdd">Add</button>
-        <h2 id="op">Result = </h2> -->
-
-
-        <!-- timing function -->
-        <!-- <br><br>
-        <button onclick="start()" id="btnAdd">Start</button>
-        <h2 id="op">Some text</h2>
-        <button onclick="stop()" id="btnAdd">Stop</button> -->
-
-        <!-- fade in / fade out -->
-        <!-- <br><br>
-        <button onclick="fadeOut()" id="btnAdd">Fade Out</button>
-        <br><br>
-        <img id="img1" src="imgs/Azore.jpg" width="250px">
-        <br><br>
-        <button onclick="fadeIn()" id="btnStop">Fade In</button> -->
-
-        <!-- zoom in / zoom out -->
-        <!-- <br><br>
-        <img onmouseover="increase()" onmouseout="decrease()" id="img1" src="imgs/JavaScriptTest.jpg" width="100"> -->
-
-        <!-- jQuery library -->
-        <h2 id="heading1">Setting up jQuery</h2>    
-        <button onclick="fn1()" id="btn1">Click Me</button>
     </body> 
 
     <!-- <script src="js/jquery-3.4.1.js"></script> -->

@@ -1,0 +1,9 @@
+.myDivs{
+    border: 2px solid blueviolet;
+    margin: 5px;
+    padding: 10px;
+}
+
+div p{
+    color: red;
+}
