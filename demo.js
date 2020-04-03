@@ -98,12 +98,15 @@ function validate(){
 
 function validateUserName(){
     var username = document.getElementById("uname").value;
-    var regex = /E00/; //checking for this patern
+    //var regex = /[a-xA-X]00/;                                          //checking for this pattern
+    var regex = /[^a-z]gmail]gmail/;
+    //regx = new RegExp("E00","i");
+
     if (regex.test(username)){
         alert("Valid username");
     }
     else{
-        alert("Invalid username");
+        //alert("Invalid username");
         document.getElementById("labelUser").style.visibility="visible";
     }
 
@@ -112,14 +115,151 @@ function validateUserName(){
 
 
 
+function validateMobileNumber(){
+    var text = document.getElementById("mobile").value;
+
+    var regex = /^[5-9][a-z]{8}[0]$/;
+
+    if (regex.test(text)){
+        document.getElementById("labelText").innerHTML="Valid";
+        document.getElementById("labelText").style.visibility="visible";
+        document.getElementById("labelText").style.color="green";
+    }
+    else{
+        document.getElementById("labelText").innerHTML="InValid";
+        document.getElementById("labelText").style.visibility="visible";        
+        document.getElementById("labelText").style.color="red";
+    }
+}
+
+
+
+function validateEmail(){
+    var text = document.getElementById("email").value;
+
+    var regex = /^([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+
+    if (regex.test(text)){
+        document.getElementById("labelText").innerHTML="Valid";
+        document.getElementById("labelText").style.visibility="visible";
+        document.getElementById("labelText").style.color="green";
+    }
+    else{
+        document.getElementById("labelText").innerHTML="InValid";
+        document.getElementById("labelText").style.visibility="visible";        
+        document.getElementById("labelText").style.color="red";
+    }
+}
+
+
+
+function addValue(){
+    var a = document.getElementById("t1").value;
+    var b = document.getElementById("t2").value;
+
+    document.getElementById("op").innerHTML = "Result = " + (a+b);
+    console.log(a+b);
+}
+
+
+var ID = 0;
+var seconds = 0;
+function printMessage(){
+    document.getElementById("op").innerHTML = seconds + " seconds";
+    seconds++;
+}
+
+
+function start(){
+    ID = window.setInterval(printMessage,1000);
+}
+
+
+function stop(){
+    window.clearInterval(ID);
+}
 
 
 
 
+var opacity = 0;
+var intervalID = 0;
+function fadeOut(){
+    intervalID = setInterval(hide,20);
+}
+
+function hide(){
+    var img = document.getElementById("img1");
+    opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+
+    if (opacity > 0){
+        opacity = opacity - 0.1;
+        img.style.opacity = opacity;
+    }
+    else{
+        clearInterval(intervalID);
+    }
+}
+
+function fadeIn(){
+    intervalID = setInterval(show,200);
+}
+
+function show(){
+    var img = document.getElementById("img1");
+    opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+
+    if (opacity < 1){
+        opacity = opacity + 0.1;
+        img.style.opacity = opacity;
+        console.log(opacity);
+    }
+    else{
+        clearInterval(intervalID);
+    }
+}
 
 
 
+var intervalIDZoomInZoomOut = 0;
+var width = 100;
+var difference = 2;
+function increase(){
+    clearInterval(intervalIDZoomInZoomOut);
+    intervalIDZoomInZoomOut = setInterval(zoomIn,20);
+}
 
+function zoomIn(){
+    if (width<200){
+        width = width + difference;
+        document.getElementById("img1").style.width = width;
+        console.log(width);
+    }
+    else{
+        clearInterval(intervalIDZoomInZoomOut);
+    }
+}
+
+function decrease(){
+    clearInterval(intervalIDZoomInZoomOut);
+    intervalIDZoomInZoomOut  = setInterval(zoomOut,20);
+}
+
+function zoomOut(){
+    if (width>100){
+        width = width - difference;
+        document.getElementById("img1").style.width = width;
+        console.log(width);
+    }
+    else{
+        clearInterval(intervalIDZoomInZoomOut);
+    }
+}
+
+
+function fn1(){
+    $("#heading1").fadeToggle(2000);
+}
 
 
 
