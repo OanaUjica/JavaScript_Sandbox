@@ -9,11 +9,12 @@
 
         <!-- jQuery selectors -->
 
-        <h2>Events in jQuery</h2>  
-        
+        <h2>Events in jQuery</h2>          
                
-        <button id="btn1">Click Me</button>
+        <button id="btn1">Click Me 1</button>
         <button id="btn2">Click Me 2</button>
+        <button id="btn3">Toggle</button>
+
 
         <p>This is a paragraph outside Div</p> 
         
@@ -46,27 +47,20 @@
     <script>
         $(document).ready(function () {
 
-            $("button").mouseenter(selectors);
-            $("button").mouseleave(selectors2);
+            $("#btn1").click(function(){
 
-            $("btn2").hover(selectors,selectors2);
+                $("#firstDiv").slideUp("slow");
+            });
 
-            function selectors(){
-                // document.getElementById();
-                // $("h2").action();                            => action() => predefined functions in jQuery
-                //                                              => ("h2")   => the selector
-                //$("h2").fadeToggle();                           // getElementByTag
-                //$("#firstH2").fadeToggle(1500);                 // getElementById
-                //$(".myHeading").fadeToggle();                   // getElementByClass
-                //$("#firstDiv,p,li,.myDivs").fadeToggle(1000);
-                //$("p:first").fadeToggle(1500);                  
-                //$("li:even").fadeToggle(1500);                  //position 0 and 2 are selected
-                $("#firstDiv").fadeOut();
-            }
+            $("#btn2").click(function(){
 
-            function selectors2(){
-                $("#firstDiv").fadeIn();
-            }
+                $("#firstDiv").slideDown();
+            });
+
+            $("#btn3").click(function(){
+
+                $("#firstDiv").slideToggle();
+            });
         });
     </script>
 </html>

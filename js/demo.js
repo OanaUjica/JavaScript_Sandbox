@@ -261,7 +261,30 @@ function fn1(){
     $("#heading1").fadeToggle(2000);
 }
 
+// $(document).ready(function () {
 
+//     $("button").mouseenter(selectors);
+//     $("button").mouseleave(selectors2);
+
+//     $("btn2").hover(selectors,selectors2);
+
+//     function selectors(){
+//         // document.getElementById();
+//         // $("h2").action();                            => action() => predefined functions in jQuery
+//         //                                              => ("h2")   => the selector
+//         //$("h2").fadeToggle();                           // getElementByTag
+//         //$("#firstH2").fadeToggle(1500);                 // getElementById
+//         //$(".myHeading").fadeToggle();                   // getElementByClass
+//         //$("#firstDiv,p,li,.myDivs").fadeToggle(1000);
+//         //$("p:first").fadeToggle(1500);                  
+//         //$("li:even").fadeToggle(1500);                  //position 0 and 2 are selected
+//         $("#firstDiv").fadeOut();
+//     }
+
+//     function selectors2(){
+//         $("#firstDiv").fadeIn();
+//     }
+// });
 
 
 
