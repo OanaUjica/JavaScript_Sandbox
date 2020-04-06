@@ -291,6 +291,28 @@ function fn1(){
 
 
 
+{/* <script>
+$(document).ready(function () {
+
+    $("#btn1").click(function(){
+
+        $("#firstDiv").slideUp("slow");
+    });
+
+    $("#btn2").click(function(){
+
+        $("#firstDiv").slideDown();
+    });
+
+    $("#btn3").click(function(){
+
+        $("#firstDiv").slideToggle();
+    });
+});
+</script> */}
+
+
+
 
 
 
