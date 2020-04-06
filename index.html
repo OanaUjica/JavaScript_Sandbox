@@ -11,11 +11,18 @@
 
         <h2>jQuery - DOM manipulations</h2>          
 
-        <button id="btn1">Action</button>
+        <button id="btn1">Append</button>
+        <button id="btn2">After</button>
+        <button id="btn3">Prepend</button>
+        <button id="btn4">Before</button>
+        <br><br>
+        <button id="btn5">Remove</button>
+        <button id="btn6">Empty</button>
+
 
         <!-- the parent is DIV, the child is P -->   
         <div id="div1" class="mydiv">            
-            <p id="p1" class="p1class" value="Hello World">This is third <b>paragraph</b> in second division</p>
+            <p id="p1" class="p1class" value="Hello World">This is 1st <b>paragraph</b> in <i>first</i> division</p>
         </div>
 
     </body> 
@@ -28,16 +35,43 @@
     </script>
 
     <script>
-
+        // append() = inserts content at the end of the selected elements
+        // prepend() = inserts content at the beginning of the selected elements
+        // after() = inserts content after the selected elements
+        // before() = inserts content before the selected elements
         $(document).ready(function() {
 
-            $("#btn1").click(function(){
-                
-                alert($("#div1").css("border"));
-                //alert($("#p1").attr("value"));
-                //$("#p1").html("This is third <b>paragraph</b>")
-                //alert($("#p1").html();            
+            $("#btn1").click(function() {
+
+                $("#div1").append("<p>This is the 2nd paragraph in 1st division</p>");
+            });
+
+            $("#btn2").click(function() {
+
+                $("#div1").after("<p>This is the 2nd paragraph in 1st division</p>");
+            });
+
+            $("#btn3").click(function() {
+
+                $("#div1").prepend("<p>This is the 2nd paragraph in 1st division</p>");
+            });
+
+            
+            $("#btn4").click(function() {
+
+                $("#div1").before("<p>This is the 2nd paragraph in 1st division</p>");
+            });
+
+            $("#btn5").click(function() {
+
+                $("#div1").remove();
+            });
+
+            $("#btn6").click(function() {
+
+                $("#div1").empty("<p>This is the 2nd paragraph in 1st division</p>");
             });
         });
+
     </script>
 </html>

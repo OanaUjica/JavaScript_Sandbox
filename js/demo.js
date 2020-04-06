@@ -359,7 +359,23 @@ $(document).ready(function() {
 
 
 
+{/* <script>
 
+$(document).ready(function() {
+
+    $("#btn1").click(function() {
+        $("#p1").css("font-size", "25px");
+        //$("#p1").attr("class", "p2class");
+    });
+
+    $("#btn2").click(function() {
+        alert($("#p1").css("font-size"));
+        //$("#p1").attr("class", "p2class");
+    });
+    
+});
+
+</script> */}
 
 
 
