@@ -8,10 +8,20 @@
     </head>
 
     <body>
-        <div id="mydiv">
-            <h2>Introduction to jQuery UI</h2>
-            <img src="imgs/Azore.jpg" width="200px" title="Azore" id="myimg">
-        </div>
+        <h2>Introduction to jQuery UI</h2>
+        <div id="panels">
+            <h3>Oana's Learning</h3>
+            <p>codingwithoana.wordpress.com</p>
+
+            <h3>Simple snippets</h3>
+            <p>codingwithoana.wordpress.comaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssdfd
+            </p>
+
+            <h3>Accordion examples</h3>
+            <p>codingwithoana.wordpress.com</p>
+        </div>    
+
 
     </body> 
 
@@ -25,11 +35,13 @@
 
 
     <script>
-        $("img").tooltip({
-            track:true,
-            content:"Love Azore",
-            show:{effect:"bounce", duration:1000},
-            hide:{effect:"explode", duration:1000}
+        $("#panels").accordion({
+            collapsible:true,
+            event:"click",
+            animate:300,
+            active:0,
+            heightStyle:true,
+            icons:{header:"ui-icon-plus", activeHeader:"ui-icon-minus"}
         });
     </script>
 </html>
