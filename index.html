@@ -10,7 +10,7 @@
     <body>
         <div id="mydiv">
             <h2>Introduction to jQuery UI</h2>
-            <input id="dateinput" placeholder="click to select date" type="text">
+            <img src="imgs/Azore.jpg" width="200px" title="Azore" id="myimg">
         </div>
 
     </body> 
@@ -25,15 +25,11 @@
 
 
     <script>
-        $("#dateinput").datepicker({
-            numberOfMonths:1,
-            changeYear:true,
-            changeMonth:true,
-            showWeek:true,
-            weekHeader:"week no",
-            showOtherMonths:true,
-            minDate: new Date(2017,0,5),
-            maxDate: new Date(2021,0,5)
+        $("img").tooltip({
+            track:true,
+            content:"Love Azore",
+            show:{effect:"bounce", duration:1000},
+            hide:{effect:"explode", duration:1000}
         });
     </script>
 </html>
