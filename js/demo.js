@@ -423,6 +423,47 @@ $(document).ready(function() {
 
 </script> */}
 
+
+
+
+
+
+
+
+
+{/* <script>
+
+$(document).ready(function() {
+
+    $("#btn1").click(function() {
+
+        $("#div1").addClass("newdivclass newparaclass");
+    });
+
+    $("#btn2").click(function() {
+
+        $("#div1").removeClass("newdivclass");
+    });
+
+    $("#btn3").click(function() {
+
+        $("#div1").toggleClass("newdivclass");
+    });
+
+    $("#btn4").click(function() {
+        $("#div1").css("font-size", "20px");
+        //alert($("#div1").css("padding"));                
+    });
+});
+
+</script> */}
+
+
+
+
+
+
+
 var Car = {
     car_brand : "Tesla",
     car_model : "Model 3",
