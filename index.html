@@ -9,18 +9,13 @@
 
     <body>
         <h2>Introduction to jQuery UI</h2>
-        <div id="panels">
-            <h3>Oana's Learning</h3>
-            <p>codingwithoana.wordpress.com</p>
-
-            <h3>Simple snippets</h3>
-            <p>codingwithoana.wordpress.comaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssdfd
-            </p>
-
-            <h3>Accordion examples</h3>
-            <p>codingwithoana.wordpress.com</p>
-        </div>    
+        <button id="btn1">Click to show message</button>
+        <br><br>
+        <div id="messagebox" title="Messagebox" class="mydiv">
+            <h3>Oana's works</h3>         
+            <img src="imgs/Azore.jpg" width="200px"> 
+        </div>
+        
 
 
     </body> 
@@ -35,13 +30,33 @@
 
 
     <script>
-        $("#panels").accordion({
-            collapsible:true,
-            event:"click",
-            animate:300,
-            active:0,
-            heightStyle:true,
-            icons:{header:"ui-icon-plus", activeHeader:"ui-icon-minus"}
+        $("#btn1").click(function(){
+            //alert("Hello!")
+            $("#messagebox").dialog({
+                title:"Custome message box",
+                draggable:true,
+                resizable:true,
+                heigth:500,
+                width:300,
+                modal:true,
+
+                buttons: [
+                    {
+                        text: "Close",
+                        icon: "ui-icon-heart",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    },
+                    {
+                        text: "Ok",
+                        icon: "ui-icon-heart",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    }    
+                ]
+            });
         });
     </script>
 </html>
