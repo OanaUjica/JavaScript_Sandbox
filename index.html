@@ -9,11 +9,10 @@
 
     <body>
         <h2>Introduction to jQuery UI</h2>
-        <button id="btn1">Click to show message</button>
-        <br><br>
-        <div id="messagebox" title="Messagebox" class="mydiv">
-            <h3>Oana's works</h3>         
-            <img src="imgs/Azore.jpg" width="200px"> 
+
+        <div class="mydiv">
+            <label><b>Enter your favorite city:</b></label>       
+            <input type="text" name="" id="citytextbox">
         </div>
         
 
@@ -30,33 +29,13 @@
 
 
     <script>
-        $("#btn1").click(function(){
-            //alert("Hello!")
-            $("#messagebox").dialog({
-                title:"Custome message box",
-                draggable:true,
-                resizable:true,
-                heigth:500,
-                width:300,
-                modal:true,
-
-                buttons: [
-                    {
-                        text: "Close",
-                        icon: "ui-icon-heart",
-                        click: function () {
-                            $(this).dialog("close");
-                        }
-                    },
-                    {
-                        text: "Ok",
-                        icon: "ui-icon-heart",
-                        click: function () {
-                            $(this).dialog("close");
-                        }
-                    }    
-                ]
-            });
+        var mycities = ["Cluj-Napoca", "Oradea", "Bistrita", "Brasov"];
+        $("#citytextbox").autocomplete({
+            source: mycities
+        },{
+            autoFocus: true,
+            delay: 0,
+            minLength: 1
         });
     </script>
 </html>
