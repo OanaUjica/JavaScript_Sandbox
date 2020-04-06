@@ -382,6 +382,46 @@ $(document).ready(function() {
 
 
 
+{/* <script>
+// append() = inserts content at the end of the selected elements
+// prepend() = inserts content at the beginning of the selected elements
+// after() = inserts content after the selected elements
+// before() = inserts content before the selected elements
+$(document).ready(function() {
+
+    $("#btn1").click(function() {
+
+        $("#div1").append("<p>This is the 2nd paragraph in 1st division</p>");
+    });
+
+    $("#btn2").click(function() {
+
+        $("#div1").after("<p>This is the 2nd paragraph in 1st division</p>");
+    });
+
+    $("#btn3").click(function() {
+
+        $("#div1").prepend("<p>This is the 2nd paragraph in 1st division</p>");
+    });
+
+    
+    $("#btn4").click(function() {
+
+        $("#div1").before("<p>This is the 2nd paragraph in 1st division</p>");
+    });
+
+    $("#btn5").click(function() {
+
+        $("#div1").remove();
+    });
+
+    $("#btn6").click(function() {
+
+        $("#div1").empty("<p>This is the 2nd paragraph in 1st division</p>");
+    });
+});
+
+</script> */}
 
 var Car = {
     car_brand : "Tesla",

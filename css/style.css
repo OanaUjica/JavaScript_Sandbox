@@ -1,11 +1,21 @@
-.mydiv{
+.mydivs{
     border: 2px solid blue;
     margin: 5px;
     padding: 10px;
 }
 
+.newdivclass{
+    border-radius: 10px;
+    background-color: aqua;
+}
+
+.newparaclass{
+    font-weight: bold;
+    color:red;
+}
+
 div p{
-    color:darkcyan;
+    color:black;
 }
 
 .mycube{
