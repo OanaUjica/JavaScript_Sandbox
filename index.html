@@ -7,17 +7,12 @@
 
     <body>
 
-        <!-- jQuery selectors -->
+        <!-- jQuery - callback and chaining in effects -->
 
-        <h2>Events in jQuery</h2>          
-               
-        <button id="btn1">Click Me 1</button>
-        <button id="btn2">Click Me 2</button>
-        <button id="btn3">Animate</button>
+        <h2>Callback and chaining in jQuery effects</h2>          
 
+        <button id="btntoggle">Toggle</button>
 
-        <p>This is a paragraph outside Div</p> 
-        
         <!-- the parent is DIV, the child is P -->
         <div id="firstDiv" class="myDivs">
             <p>This is first paragraph in first division</p>            
@@ -25,18 +20,6 @@
         </div>    
         <div id="secondDiv" class="myDivs">            
             <p>This is third paragraph in second division</p>
-        </div>
-        <div id="thirdDiv" class="myDivs">            
-            <ul>
-                <li>List item 1</li>
-                <li>List item 2</li>
-                <li>List item 3</li>
-                <li>List item 4</li>
-            </ul>
-        </div>
-
-        <div id="cube" class="mycube">
-            <p>CUBE</p>
         </div>
 
     </body> 
@@ -51,15 +34,23 @@
     <script>
         $(document).ready(function() {
 
-            $("#btn3").click(function(){
+            // callback
+            function printMessage(){
+                alert("Slide toggling done"); 
+            }
 
-                $("#cube").animate({
-                    left:'150px',
-                    opacity:'1',
-                    width:'100px',
-                    height:'100px'
-                },3000)
-            });
+            // $("#btntoggle").click(function() {
+            //     $("#firstDiv").slideToggle(3000,printMessage);                
+            // });
+
+
+
+            // chaining
+            $("#btntoggle").click(function() {
+
+                $("#firstDiv").slideUp(2000).slideDown(2000).fadeOut(1000).fadeIn(3000);
+            });  
+            
         });
     </script>
 </html>

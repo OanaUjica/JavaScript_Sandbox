@@ -313,7 +313,20 @@ $(document).ready(function () {
 
 
 
+{/* <script>
+$(document).ready(function() {
 
+    $("#btn3").click(function(){
+
+        $("#cube").animate({
+            left:'150px',
+            opacity:'1',
+            width:'100px',
+            height:'100px'
+        },3000)
+    });
+});
+</script> */}
 
 
 
