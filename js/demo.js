@@ -332,6 +332,39 @@ $(document).ready(function() {
 
 
 
+{/* <script>
+$(document).ready(function() {
+
+    // callback
+    function printMessage(){
+        alert("Slide toggling done"); 
+    }
+
+    // $("#btntoggle").click(function() {
+    //     $("#firstDiv").slideToggle(3000,printMessage);                
+    // });
+
+
+
+    // chaining
+    $("#btntoggle").click(function() {
+
+        $("#firstDiv").slideUp(2000).slideDown(2000).fadeOut(1000).fadeIn(3000);
+    });  
+    
+});
+</script> */}
+
+
+
+
+
+
+
+
+
+
+
 
 
 var Car = {

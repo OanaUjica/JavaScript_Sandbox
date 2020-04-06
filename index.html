@@ -7,19 +7,15 @@
 
     <body>
 
-        <!-- jQuery - callback and chaining in effects -->
+        <!-- jQuery - DOM manipulations -->
 
-        <h2>Callback and chaining in jQuery effects</h2>          
+        <h2>jQuery - DOM manipulations</h2>          
 
-        <button id="btntoggle">Toggle</button>
+        <button id="btn1">Action</button>
 
-        <!-- the parent is DIV, the child is P -->
-        <div id="firstDiv" class="myDivs">
-            <p>This is first paragraph in first division</p>            
-            <p>This is second paragraph in first division</p>
-        </div>    
-        <div id="secondDiv" class="myDivs">            
-            <p>This is third paragraph in second division</p>
+        <!-- the parent is DIV, the child is P -->   
+        <div id="div1" class="mydiv">            
+            <p id="p1" class="p1class" value="Hello World">This is third <b>paragraph</b> in second division</p>
         </div>
 
     </body> 
@@ -32,25 +28,16 @@
     </script>
 
     <script>
+
         $(document).ready(function() {
 
-            // callback
-            function printMessage(){
-                alert("Slide toggling done"); 
-            }
-
-            // $("#btntoggle").click(function() {
-            //     $("#firstDiv").slideToggle(3000,printMessage);                
-            // });
-
-
-
-            // chaining
-            $("#btntoggle").click(function() {
-
-                $("#firstDiv").slideUp(2000).slideDown(2000).fadeOut(1000).fadeIn(3000);
-            });  
-            
+            $("#btn1").click(function(){
+                
+                alert($("#div1").css("border"));
+                //alert($("#p1").attr("value"));
+                //$("#p1").html("This is third <b>paragraph</b>")
+                //alert($("#p1").html();            
+            });
         });
     </script>
 </html>
